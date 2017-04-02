@@ -24,7 +24,7 @@ let eventController = {
             
    if (err) {
         res.status(500).send(err);
-    } else {
+    } if(event) {
         // Update each attribute with any possible attribute that may have been submitted in the body of the request
         // If that attribute isn't in the request body, default back to whatever it was before.
         event.title = req.body.title || event.title;
@@ -39,10 +39,13 @@ let eventController = {
             }
             res.send(event);
         });
-    }     
+    } 
+    if(!event)  {
+        res.send("not found");
+    }  
 
 })
     }
 }
 
-module.exports = eventController;
+module.exports = eventController;   
