@@ -20,7 +20,7 @@ let eventController = {
 
     updateEvent:function(req, res){
         
-        Event.findById(req.params._id,function(err, event){
+        Event.findById(req.body._id,function(err, event){
             
    if (err) {
         res.status(500).send(err);
