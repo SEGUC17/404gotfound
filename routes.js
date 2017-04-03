@@ -7,10 +7,10 @@ var scheduleController = require('./controllers/scheduleController');
 router.post('/event', eventController.createEvent);
 router.put('/event', eventController.updateEvent);
 router.post('/schedule', scheduleController.postSchedule);
-router.post('/delete', deleteDiscussionUser.deleteDiscussion);
-router.post('/delete', deleteDiscussionSer.deleteDiscussion);
-router.post('/delete', deleteEvent.deleteEvent);
-router.post('/delete', deleteSchedule.deleteSchedule);
+router.post('/deleteUser', deleteDiscussionUser.deleteDiscussion);
+router.post('/deleteSP', deleteDiscussionSer.deleteDiscussion);
+router.post('/deleteEvent', deleteEvent.deleteEvent);
+router.post('/deleteSchedule', deleteSchedule.deleteSchedule);
 
 //export this router to use in our index.js
 module.exports = router;
