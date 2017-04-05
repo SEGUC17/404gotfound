@@ -1,4 +1,4 @@
-let Discussion = require('../models/discussion');
+let Discussion = require('../models/discussionSer');
 
 
 let deleteDiscussionSer = {
