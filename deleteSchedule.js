@@ -1,10 +1,9 @@
-let Schedule = require('../models/Schedule');
-let mongoose = require(mongoose);
+let Schedule = require('../models/schedule');
 
 
 let deleteSchedule = {
   deleteSchedule:function(req, res){
-    Schedule.find(id: req.prams.id).remove().exec(function(error,deleted){
+    Schedule.findById(id =  req.body._id).remove().exec(function(error,deleted){
 
     });
   }

@@ -1,14 +1,11 @@
 let Discussion = require('../models/Discussion');
-let mongoose = require(mongoose);
 
 
-let deleteDiscussion = {
+let deleteDiscussionUser = {
   deleteDiscussion:function(req, res){
-    Discussion.find(id: req.prams.id).remove().exec(function(error,deleted){
+    Discussion.findById(id =  req.body._id).remove().exec(function(error,deleted){
 
     });
   }
 }
-
-
-module.exports = deleteDiscussion;
+module.exports = deleteDiscussionUser;

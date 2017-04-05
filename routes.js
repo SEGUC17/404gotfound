@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var eventController = require('./controllers/eventController');
-var scheduleController = require('./controllers/scheduleController');
+var deleteDiscussionUser = require('./controllers/deleteDiscussionUser');
+var deleteDiscussionSer = require('./controllers/deleteDiscussionSer');
+var deleteSchedule = require('./controllers/deleteSchedule');
+var deleteEvent = require('./controllers/deleteEvent');
 
 router.post('/deleteUser', deleteDiscussionUser.deleteDiscussion);
 router.post('/deleteSP', deleteDiscussionSer.deleteDiscussion);

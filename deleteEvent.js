@@ -1,10 +1,8 @@
-let Event = require('../models/Event');
-let mongoose = require(mongoose);
-
+let Event = require('../models/event');
 
 let deleteEvent = {
   deleteEvent:function(req, res){
-    Event.find(id: req.prams.id).remove().exec(function(error,deleted){
+    Event.findById(id =  req.body._id).remove().exec(function(error,deleted){
 
     });
   }
