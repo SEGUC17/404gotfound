@@ -8,11 +8,11 @@
     "start": "node app"
   },
   "dependencies": {
-    "express": "*",
-    "mongoose": "*",
     "body-parser": "*",
     "ejs": "*",
-    "express-validator": "*"
+    "express": "*",
+    "express-validator": "*",
+    "mongoose": "^4.9.3"
   },
   "author": "sarah",
   "license": "ISC",

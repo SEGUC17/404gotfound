@@ -1,4 +1,4 @@
-var Discussion = require('../models/discussionUser');
+let Discussion = require('../models/discussionUser');
 let controller = {
   postDiscussion:function(req,res){
     let newDiscussion = new Discussion(req.body);
@@ -25,6 +25,17 @@ let controller = {
       }
       if(newDiscussion){
         newDiscussion.comment = req.body.comment||newDiscussion.comment;
+        newDiscussion.save(function(err, newDiscussion){
+      if(err){
+      console.log('error');
+      res.send(err.message);
+    }
+      else{
+      console.log(newDiscussion);
+      res.redirect('/');
+    }
+  });
+
 
       }
     });
