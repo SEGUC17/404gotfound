@@ -1,8 +1,12 @@
 var express = require('express');
-var router = require('./app/routes');
+
+var router = require('./app/routes');   
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var path = require('path');
+var expressValidator = require ('express-validator');
+
+
 
 var DB_URI = "mongodb://localhost:27017/portfolio";
 
@@ -26,4 +30,6 @@ app.use(router);
 
 app.listen(3000, function(){
     console.log("server is listening on port 3000");
+
 })
+

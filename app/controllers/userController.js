@@ -34,7 +34,7 @@ if(err){
 }
 
 })
-  //if(req.body.Username == collection.find.{ Username: req.body.Username,Password: req.body.Password })
+  
 }
 }
 

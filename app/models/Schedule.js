@@ -12,3 +12,13 @@ var scheduleSchema = new Schema({
 var Schedule = mongoose.model("schedule", scheduleSchema);
 
 module.exports = Schedule;
+
+
+
+
+
+
+
+
+
+
