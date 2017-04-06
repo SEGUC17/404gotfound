@@ -11,7 +11,6 @@ var DB_URI = "mongodb://localhost:27017/portfolio";
 
 var app = express();
 
-app.set('views', path.join(__dirname , 'views'));
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended:false}));
