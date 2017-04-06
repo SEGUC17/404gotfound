@@ -4,7 +4,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var path = require('path');
 var expressValidator = require ('express-validator');
-var DB_URI = "mongodb://localhost:27017/portfolio";
+var DB_URIo = "mongodb://localhost:27017/portfolio";
+mongoose.Promise = global.Promise;
 
 var app = express();
 
@@ -16,7 +17,8 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(express.static(path.join(__dirname , 'public')));
 
-mongoose.connect(DB_URI);
+mongoose.connect(DB_URIo);
+mongoose.Promise = global.Promise;
 
 
 

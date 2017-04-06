@@ -3,7 +3,16 @@ let Discussion = require('../models/discussionUser');
 
 let deleteDiscussionUser = {
   deleteDiscussion:function(req, res){
-    Discussion.findById(id =  req.body._id).remove().exec(function(error,deleted){
+    Discussion.findById(req.body._id).remove().exec(function(err,deleted){
+      if(err){
+        console.log("err");
+        res.send(err.message);
+
+      }
+      else {
+        console.log("deleted");
+        res.send(deleted);
+      }
 
     });
   }

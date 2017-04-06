@@ -2,7 +2,16 @@ let Event = require('../models/event');
 
 let deleteEvent = {
   deleteEvent:function(req, res){
-    Event.findById(id =  req.body._id).remove().exec(function(error,deleted){
+    Event.findById(req.body._id).remove().exec(function(err,deleted){
+      if(err){
+        console.log("err");
+        res.send(err.message);
+
+      }
+      else {
+        console.log("deleted");
+        res.send(deleted);
+      }
 
     });
   }

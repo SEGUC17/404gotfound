@@ -5,10 +5,10 @@ var deleteDiscussionSer = require('./controllers/deleteDiscussionSer');
 var deleteSchedule = require('./controllers/deleteSchedule');
 var deleteEvent = require('./controllers/deleteEvent');
 
-router.post('/deleteUser', deleteDiscussionUser.deleteDiscussion);
-router.post('/deleteSP', deleteDiscussionSer.deleteDiscussion);
-router.post('/deleteEvent', deleteEvent.deleteEvent);
-router.post('/deleteSchedule', deleteSchedule.deleteSchedule);
+router.delete('/deleteUser', deleteDiscussionUser.deleteDiscussion);
+router.delete('/deleteSP', deleteDiscussionSer.deleteDiscussion);
+router.delete('/deleteEvent', deleteEvent.deleteEvent);
+router.delete('/deleteSchedule', deleteSchedule.deleteSchedule);
 
 //export this router to use in our index.js
 module.exports = router;
