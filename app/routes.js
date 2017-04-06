@@ -1,4 +1,14 @@
 var express = require('express');
+<<<<<<< HEAD
+var bodyParser = require('body-parser').json;
+var router = express.Router();
+
+
+var controller = require('./controller/controller');
+
+router.post('/discussionUser', controller.postDiscussion);
+router.put('/discussionUser/comment', controller.addComment);
+=======
 
 var router = express.Router();
 
@@ -27,5 +37,6 @@ router.post('/login',userController.Bring);
 router.put('/serivceprovider',scheduleController.updateServiceProvider);
 
 
+>>>>>>> d558e76119e3e92dd54c9fead9e84207736a0741
 
 module.exports = router;
