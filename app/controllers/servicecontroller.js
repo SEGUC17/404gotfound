@@ -2,6 +2,23 @@ let ServiceProvider = require('../models/serviceprovider');
 
 let serviceController = {
     
+getALL:function(req,res){
+
+ServiceProvider.find(function(err,serviceprovider) {
+if(err){
+    res.send(err);
+
+}
+else{
+    res.json(serviceprovider);
+}
+
+}  )
+
+
+},
+
+
     login:function(req, res){
     
 ServiceProvider.findOne({username:req.body.username},function(err,servicelogin){
