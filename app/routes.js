@@ -13,7 +13,7 @@ var searchController = require('./controllers/search.controller');
 var scheduleController = require('./controllers/scheduleController');
 var userController = require('./controllers/userController');
 var eventController = require('./controllers/eventController');
-var controller = require('./controller/controller');
+var controller = require('./controllers/controller');
 
 
 
