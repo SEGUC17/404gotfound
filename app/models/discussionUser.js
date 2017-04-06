@@ -1,16 +1,21 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
 
-var discussionSchema = new Schema({
+var discussionSchema = mongoose.Schema({
   content: {
     type: String,
     required: true
   },
   comment: {
-  	type: String
+
+    type: String
   }
-});
+})
+
+var Discussion =  mongoose.model('Discussion', discussionSchema);
+
+module.exports = Discussion;
+
+  
 
 
-var Discussion = module.exports = mongoose.model('Discussion', discussionSchema);
