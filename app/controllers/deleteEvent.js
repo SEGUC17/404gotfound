@@ -1,4 +1,4 @@
-let Event = require('../models/event');
+let Event = require('../models/Event');
 
 let deleteEvent = {
   deleteEvent:function(req, res){
