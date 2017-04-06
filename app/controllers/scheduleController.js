@@ -8,11 +8,11 @@ let scheduleController = {
         schedule.save(function(err, event){
             if(err){
                 res.send(err.message)
-                console.log(err);
+              
             }
             else{
 
-                console.log(schedule);
+               
                 res.redirect('/');
             }
         })

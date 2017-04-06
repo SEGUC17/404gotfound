@@ -8,6 +8,4 @@ router.post('/event', eventController.createEvent);
 router.put('/event', eventController.updateEvent);
 router.post('/schedule', scheduleController.postSchedule);
 
-
-//export this router to use in our index.js
 module.exports = router;
