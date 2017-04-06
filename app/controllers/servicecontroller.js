@@ -27,8 +27,6 @@ res.send(err.message);
 }
 if(req.body.password==servicelogin.password){
 
-console.log("logged in");
-
 res.json(servicelogin);
 }
 })},
@@ -48,7 +46,7 @@ serviceprovider = new ServiceProvider(req.body);
 serviceprovider.save(function(err){
             if(err){
                 res.send(err.message)
-                console.log(err);
+               
 
 
         
@@ -58,7 +56,7 @@ serviceprovider.save(function(err){
               
               
      res.json({ message: 'ServiceProvider added' });        
-      //  
+       
     }
         })
 
