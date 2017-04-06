@@ -1,11 +1,13 @@
 var mongoose = require('mongoose');
 
+
 var discussionSchema = mongoose.Schema({
   content: {
     type: String,
     required: true
   },
   comment: {
+
     type: String
   }
 })
@@ -13,3 +15,7 @@ var discussionSchema = mongoose.Schema({
 var Discussion =  mongoose.model('Discussion', discussionSchema);
 
 module.exports = Discussion;
+
+  
+
+

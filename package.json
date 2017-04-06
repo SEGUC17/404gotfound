@@ -1,17 +1,28 @@
 {
-  "name": "session",
+
+  "name": "sprint1",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.16.1",
-    "ejs": "^2.5.5",
-    "express": "^4.14.1",
-    "mongoose": "^4.8.2"
+
+ "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.3",
+    "nodemon": "^1.11.0",
+    "express-validator": "^3.1.3",
+    "ejs": "^2.5.6"
+  
+
+
+   
   }
+
+
 }
