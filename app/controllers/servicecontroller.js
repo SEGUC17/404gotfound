@@ -26,7 +26,7 @@ if(err){
 res.send(err.message);
 }
 if(req.body.password==servicelogin.password){
-//res.redirect("/profile");
+
 console.log("logged in");
 
 res.json(servicelogin);

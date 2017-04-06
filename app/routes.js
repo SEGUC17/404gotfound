@@ -1,19 +1,39 @@
-// require dependincies 
+
+
 var express = require('express');
 var router = express.Router();
 var serviceController = require('./controllers/servicecontroller');
 var reviewsController = require('./controllers/reviewscontroller');
-// add routes
-router.post('/signup', serviceController.signup);
-router.post('/login', serviceController.login);
+var eventsController = require('./controllers/events.controller');
+var searchController = require('./controllers/search.controller');
+var scheduleController = require('./controllers/scheduleController');
+var userController = require('./controllers/userController');
+var eventController = require('./controllers/eventController');
+
+router.post('/signup-sp', serviceController.signup);
+router.post('/login-sp', serviceController.login);
+router.get('/events', eventsController.showEvents);
+
+router.get('/search', searchController.showSearchResults);
+
+
+router.post('/event', eventController.createEvent);
+router.put('/event', eventController.updateEvent);
+router.post('/schedule', scheduleController.postSchedule);
+router.put('/schedule',scheduleController.updateSchedule);
+
+
+
+router.post('/signup', userController.add);
+router.post('/login',userController.Bring);
+
+router.put('/serivceprovider',scheduleController.updateServiceProvider);
 router.get('/', function(req, res) {
     res.json({ message: 'welcome to the website' });   
 });
 router.get('/get-data', serviceController.getALL);
 router.post('/insert', reviewsController.insert);
 
-//router.post('/serviceprovider', projectController.createProject);
 
-// export router
 
 module.exports = router;
