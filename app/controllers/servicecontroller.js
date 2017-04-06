@@ -56,7 +56,7 @@ serviceprovider.save(function(err){
             else{
 
               
-               // res.redirect('/serviceprovider');
+              
      res.json({ message: 'ServiceProvider added' });        
       //  
     }

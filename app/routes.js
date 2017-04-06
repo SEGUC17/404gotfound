@@ -1,5 +1,4 @@
 
-
 var express = require('express');
 var router = express.Router();
 var serviceController = require('./controllers/servicecontroller');
@@ -9,6 +8,14 @@ var searchController = require('./controllers/search.controller');
 var scheduleController = require('./controllers/scheduleController');
 var userController = require('./controllers/userController');
 var eventController = require('./controllers/eventController');
+var controller = require('./controller/controller');
+
+
+
+router.post('/discussionUser', controller.postDiscussion);
+router.put('/discussionUser/comment', controller.addComment);
+
+
 
 router.post('/signup-sp', serviceController.signup);
 router.post('/login-sp', serviceController.login);
