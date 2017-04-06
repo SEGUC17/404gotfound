@@ -3,14 +3,10 @@ var mongoose = require('mongoose');
 var serviceproviderSchema = mongoose.Schema({
     name:{
         type:String,
-        required:true,
+        required:true
         
     },
-    // id:{
-    //     type:Integer,
-    //     unique:true
-
-    // },
+    
      username:{
         type:String,
         required:true,
@@ -41,12 +37,15 @@ var serviceproviderSchema = mongoose.Schema({
     },
      schedule:{
 
-    type:String
+     type:Array
 
      },
     URL:String
-})
+});
 
 var ServiceProvider = mongoose.model("serviceprovider", serviceproviderSchema);
 
 module.exports = ServiceProvider;
+
+
+
