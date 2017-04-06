@@ -1,4 +1,4 @@
-let providers = require('../models/serviceProvider');
+let providers = require('../models/serviceprovider');
 
 module.exports = {
 

@@ -37,7 +37,7 @@ var serviceproviderSchema = mongoose.Schema({
     },
      schedule:{
 
-     type:String
+     type:Array
 
      },
     URL:String
@@ -46,3 +46,6 @@ var serviceproviderSchema = mongoose.Schema({
 var ServiceProvider = mongoose.model("serviceprovider", serviceproviderSchema);
 
 module.exports = ServiceProvider;
+
+
+

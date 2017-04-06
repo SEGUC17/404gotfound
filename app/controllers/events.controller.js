@@ -1,11 +1,10 @@
-let Event = require('../models/events');
-let join = require('../models/users');
+let Event = require('../models/Event');
+let join = require('../models/user');
 let joinedEvents = require('../models/joinedEvents');
 
 module.exports = {
 
     showEvents: showEvents,
-    //showSingle: showSingle,
     joinEvents: joinEvents
 }
 
@@ -21,18 +20,6 @@ function showEvents (req,res){
 
      });
 }
-
-// function showSingle(req,res, name1){
-//     Event.find({name: name1},{sp_name: 1, title: 1},(function(err,single_event){
-//         if(err){
-//             res.send(err.message);
-//         }
-//         else {
-//              res.send(single_event);
-//         }
-
-//     }));
-// }
 
 function joinEvents(req,res){
     let newJoined = new joinedEvents(req.body);

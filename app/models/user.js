@@ -12,11 +12,6 @@ var userSchema = mongoose.Schema({
      required : true,
    },
 
- _id: {
-   type : String,
-
-  unique:true
- },
  name : String ,
  age : Number,
  weight : Number,
@@ -28,4 +23,4 @@ var userSchema = mongoose.Schema({
  });
    var User = mongoose.model("user", userSchema);
 
-module.exports = User;
+   module.exports = User;
