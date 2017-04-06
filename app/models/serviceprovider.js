@@ -45,7 +45,5 @@ var serviceproviderSchema = mongoose.Schema({
 
 var ServiceProvider = mongoose.model("serviceprovider", serviceproviderSchema);
 
+
 module.exports = ServiceProvider;
-
-
-
