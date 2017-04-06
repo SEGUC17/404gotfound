@@ -5,11 +5,11 @@ let controller = {
 
   newDiscussion.save(function(err, newDiscussion){
     if(err){
-      console.log('error');
+     
       res.send(err.message);
     }
     else{
-      console.log(newDiscussion);
+     
       res.redirect('/');
     }
   });
@@ -17,7 +17,7 @@ let controller = {
   addComment: function(req,res){
     Discussion.findById(req.body._id,function(err,newDiscussion){
       if(err){
-        console.log('error');
+        
         res.send(err.message);
       }
       if(!newDiscussion){
@@ -27,11 +27,11 @@ let controller = {
         newDiscussion.comment = req.body.comment||newDiscussion.comment;
         newDiscussion.save(function(err, newDiscussion){
       if(err){
-      console.log('error');
+     
       res.send(err.message);
     }
       else{
-      console.log(newDiscussion);
+      
       res.redirect('/');
     }
   });
