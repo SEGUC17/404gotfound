@@ -1,0 +1,1 @@
+var befitApp = angular.module('befitApp',[ui.router]);
