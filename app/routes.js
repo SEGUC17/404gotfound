@@ -4,8 +4,16 @@ var eventController = require('./controllers/eventController');
 var scheduleController = require('./controllers/scheduleController');
 
 
-router.post('/event', eventController.createEvent);
-router.put('/event', eventController.updateEvent);
-router.post('/schedule', scheduleController.postSchedule);
 
+ 
+        
+    router.post('/event', eventController.createEvent);
+    router.post('/schedule', scheduleController.postSchedule);
+
+    router.put('/event', eventController.updateEvent);
+
+    
 module.exports = router;
+
+
+
