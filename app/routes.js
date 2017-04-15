@@ -12,6 +12,9 @@ var scheduleController = require('./controllers/scheduleController');
 
     router.put('/event', eventController.updateEvent);
 
+
+
+
     
 module.exports = router;
 
