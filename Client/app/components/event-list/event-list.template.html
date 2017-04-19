@@ -1,0 +1,27 @@
+
+<head><title>Events</title></head>
+
+
+ <form ng-submit="$ctrl.addRow()">
+    
+<label>Service Provider Name: <input type="text"  required ng-model="$ctrl.sp_name"></label>
+
+
+<br><br><label>Title: <input type="text" required ng-model="$ctrl.title"></label>
+ <br><br><label>Date: <input type="text" required ng-model="$ctrl.date"></label>
+ <br><br><label>Description: <input type="text" style=" height: 400px; width:500px;" required ng-model="$ctrl.description"></label>
+&emsp; &emsp; &emsp; &emsp; <input type= "submit"  value = "Create Event " style=" height: 70px; width:120px;"   >
+
+  </form>
+ 
+ <div> </div> 
+
+ <div ng-show="$ctrl.loading">
+   <p>  ID of event posted :   {{$ctrl.idofevent}} </p>
+   <p> Title of event posted :  {{$ctrl.eventTitle}}</p>
+<label> ID: <input type="text"  required ng-model="$ctrl._id"></label>  <button  ng-click="$ctrl.editEvent()"> Update Event </button>
+ </div>
+ <div ng-show="$ctrl.update">
+   <p> Title of event posted :  {{$ctrl.eventTitle}}</p>
+</div>
+ 
