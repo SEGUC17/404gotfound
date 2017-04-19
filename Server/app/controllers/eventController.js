@@ -2,7 +2,6 @@ let Event = require('../models/Event');
 
 let eventController = {
 
-
  createEvent:function(req, res){
         let event = new Event(req.body);
 
@@ -14,7 +13,9 @@ let eventController = {
             else{
 
               
+
            res.send (event);
+
             }
         })
     },

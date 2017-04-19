@@ -6,6 +6,7 @@ templateUrl: 'components/event-list/event-list.template.html',
 controller: function EventListController($http){
 
     var self = this ; 
+
     self.loading = false ;
     self.update = false ;
 
@@ -81,5 +82,5 @@ self.description = ""
 }
 
 } 
-     
 })
+     

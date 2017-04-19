@@ -1,6 +1,5 @@
 'use strict';
 
-// Step 1
 
 var befitApp = angular.module('befitApp',['ui.router']);
 
@@ -18,6 +17,7 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
     }
     $stateProvider.state(eventState);
     $stateProvider.state(scheduleState);
+
     
     $urlRouterProvider.when('','/event');
         

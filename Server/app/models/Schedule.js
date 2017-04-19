@@ -4,7 +4,9 @@ var Schema = mongoose.Schema;
 var scheduleSchema = new Schema({
 
   sp_name:  String,
+
   details : String
+
 }); 
 
 

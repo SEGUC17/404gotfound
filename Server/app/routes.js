@@ -25,6 +25,7 @@ router.get('/', function(req, res) {
 });
 router.get('/get-data', serviceController.getALL);
 
+
 router.get('/payment', function(req,res){
 
     res.render('index', {
@@ -52,6 +53,7 @@ router.post('/charge', function(req , res){
     console.log("Your payment was successful")
 res.redirect('/paysuccess');
 });
+
 router.post('/post', postController.Post);
 router.post('/discussionUser', controller.postDiscussion);
 router.post('/login-sp', serviceController.login);
