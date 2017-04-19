@@ -68,7 +68,6 @@ res.send("not found");
             }
             else{
 
-D
                 res.send(schedule);
 
             }
