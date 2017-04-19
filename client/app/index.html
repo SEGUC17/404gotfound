@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Step 1 -->
+<html lang="en" ng-app="blogApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Blog</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!-- <div class="app-wrapper" ng-controller="PostListController"> -->
+    <div class="app-wrapper">
+        <!-- <input ng-model="heading" /> -->
+        <!-- <h1>{{ heading }}</h1> -->
+        <!-- Step 2 -->
+        <!-- <div class="app-post" ng-repeat="post in posts">
+            <h2>{{post.title}}</h2>
+        </div> -->
+        <!-- Step 3 -->
+        <!-- <post-list></post-list> -->
+        <!-- Step 4 -->
+        <ui-view></ui-view>
+    </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <!-- <script src="bower_components/angular-route/angular-route.js"></script> -->
+  <script src="app.js"></script>
+  <script src="components/post-list/post-list.component.js"></script>
+  <script src="components/single-post/single-post.component.js"></script>
+</body>
+</html>
