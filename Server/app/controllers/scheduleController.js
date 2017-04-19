@@ -53,29 +53,9 @@ res.send("not found");
 res.send("not found");
              }
         })
-      },
-
+      }
+}
     
-       postSchedule:function(req, res){
-        let schedule = new Schedule(req.body);
-
-        schedule.save(function(err, event){
-            if(err){
-                res.send(err.message)
-              
-            }
-            else{
-
-               
-                res.redirect('/');
-            }
-        })
-    }
-    }     
-
-
-
-
-
+            
 
 module.exports = scheduleController;
