@@ -3,12 +3,13 @@ angular.module('befitApp').
 component('eventList',{
 
 templateUrl: 'components/event-list/event-list.template.html',
-controller: function EventListController($http){
+controller: function EventListController($http,$scope){
 
     var self = this ; 
 
     self.loading = false ;
     self.update = false ;
+  
 
  self.addRow = function() {
   
@@ -28,8 +29,11 @@ controller: function EventListController($http){
 }).then(function (res) {     
 alert("Event is posted succesfully ");
 self.event = res.data;
-self.eventTitle = res.data.title;
+self.eventDes = res.data.description;
+self.name = res.data.sp_name ;
 self.idofevent = res.data._id;
+self.eventTitle = res.data.title ;
+self.eventDate = res.data.date ;
 
    
 
@@ -63,15 +67,19 @@ self.editEvent = function() {
 }).then(function (res) {     
 alert("Event is Updated succesfully ");
 self.event = res.data;
-self.eventTitle = res.data.title;
+self.name = res.data.sp_name ;
+self.eventDes = res.data.description;
 self.idofevent = res.data._id;
+self.eventTitle = res.data.title ;
+self.eventDate = res.data.date ;
+
    
 
 }, function (err) {         
    alert("Error : Try Again ! ");
     
 });
-self.update = true ;
+self.loading = true ;
 
 self._id = "" ;
 self.sp_name = "";

@@ -15,8 +15,14 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
         url: '/schedule',
         template : '<schedule-list></schedule-list>'
     }
+      var paymentState = {
+        name : 'payment',
+        url: '/payment',
+        template : '<stripe-payment></stripe-payment>'
+    }
     $stateProvider.state(eventState);
     $stateProvider.state(scheduleState);
+    $stateProvider.state(paymentState);
 
     
     $urlRouterProvider.when('','/event');

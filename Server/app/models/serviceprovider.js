@@ -34,7 +34,10 @@ var serviceproviderSchema = mongoose.Schema({
 
 
 
-    },
+},
+
+subscription_fee_per_month : String , 
+
      schedule:{
 
      type:Array

@@ -1,13 +1,18 @@
 
 <head><title>Schedule</title></head>
 
-
+<div class="app-schedule">
  <form ng-submit="$ctrl.addSchedule()">
     
 <label>Service Provider Name: <input type="text"  required ng-model="$ctrl.sp_name"></label>
 
- <br><br><label>Please Enter schedule of your classes here : <input type="text" style=" height: 400px; width:500px;" required ng-model="$ctrl.details"></label>
-&emsp; &emsp; &emsp; &emsp; <input type= "submit"  value = "Add Schedule " style=" height: 70px; width:120px;"   >
+
+ <br><br><br><label>Please Enter schedule of your classes here : <br><br> <textarea ID="area" class="in" 
+ required ng-model="$ctrl.details"  
+  style=" height: 200px; width:400px;"> 
+</textarea></label>
+<br><br>
+ <input type= "submit"  value = "Add Schedule " style=" height: 70px; width:130px;" >
 
   </form>
 
@@ -15,6 +20,7 @@
  <p> Schedule posted : {{$ctrl.viewSchedule}}</p>
  <div> </div> 
   </div>
+</div>
 
 
 
