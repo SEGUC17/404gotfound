@@ -11,8 +11,7 @@ if(err){
 }
 else{
     res.json(serviceprovider);
-    
-    console.log(serviceprovider);
+
 }
 
 }  )

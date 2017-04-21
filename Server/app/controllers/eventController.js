@@ -12,9 +12,8 @@ let eventController = {
             }
             else{
 
-              
 
-           res.send (event);
+                res.send(event);
 
             }
         })

@@ -1,4 +1,6 @@
-let Schedule = require('../models/Schedule');
+
+   let Schedule = require('../models/Schedule');
+
 
 
 let deleteSchedule = {

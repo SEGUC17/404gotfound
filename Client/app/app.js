@@ -5,6 +5,24 @@ var befitApp = angular.module('befitApp',['ui.router']);
 
 befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     
+
+    var reviewState = {
+        name: 'review' ,
+        url: '/review' ,
+        template: '<write-review></write-review>'
+    }
+  
+   
+
+ var viewState = {
+        name: 'view' ,
+        url: '/view' ,
+        template: '<viewsp></viewsp>'
+    }
+  
+  
+
+
     var eventState = {
         name: 'event' ,
         url: '/event' ,
@@ -23,9 +41,12 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
     $stateProvider.state(eventState);
     $stateProvider.state(scheduleState);
     $stateProvider.state(paymentState);
+     $stateProvider.state(reviewState);
+       $stateProvider.state(viewState);
 
     
-    $urlRouterProvider.when('','/event');
+    $urlRouterProvider.when('','/login');
+
         
 }]);
 

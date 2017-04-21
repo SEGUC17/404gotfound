@@ -59,7 +59,6 @@ res.send("not found");
        postSchedule:function(req, res){
         let schedule = new Schedule(req.body);
 
-
         schedule.save(function(err, schedule){
 
             if(err){
