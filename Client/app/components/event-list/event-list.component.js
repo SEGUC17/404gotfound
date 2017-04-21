@@ -3,7 +3,7 @@ angular.module('befitApp').
 component('eventList',{
 
 templateUrl: 'components/event-list/event-list.template.html',
-controller: function EventListController($http,$scope){
+controller: function EventListController($http){
 
     var self = this ; 
 
