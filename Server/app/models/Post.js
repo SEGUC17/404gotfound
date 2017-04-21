@@ -10,10 +10,10 @@ var postSchema = mongoose.Schema({
     },comment:{
        type:String
 
-    }
+    },
     URL:String
 })
 
 var Post = mongoose.model("post", postSchema);
 
-module.exports = post;
+module.exports = Post;
