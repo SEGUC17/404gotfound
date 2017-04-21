@@ -32,14 +32,15 @@ var serviceproviderSchema = mongoose.Schema({
     type:String,
     required:true
 
-
-
     },
      schedule:{
 
      type:String
 
-     },
+} , 
+
+subscription_fee_per_month : String , 
+
     URL:String
 });
 

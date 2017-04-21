@@ -11,14 +11,13 @@ controller: function viewsp($http){
     
   
     $http({
-    method: "Get",
+    method: "Get",  
     url: "http://localhost:3000/get-data",
     data: { 
            username: self.username , 
            category:self.category,
            serviceoffered: self.serviceoffered
         
-    },
     
          }, 
            headers: {
@@ -35,16 +34,12 @@ self.thisserviceoffered=res.data.serviceoffered
    
 
 }, function (err) {         
-    //alert("Error : Try Again ! ");
+
 });
 
  }
 
-
-
-    
-
-} 
+ 
 })
      
 

@@ -1,0 +1,16 @@
+<form action="/charge" method="POST">
+
+
+<label>Title: <input type="text" required ></label>
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_pojaTYHRAQdb9dc1VtbTNOJE"
+    data-amount="30000"
+    data-name="Demo Site"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-currency = "egp">
+  </script>
+  <input type= "hidden" name= "chargeAmount" value = "30000">
+</form>

@@ -32,7 +32,7 @@ self.thisrate = res.data.rate ;
    
 
 }, function (err) {         
-    //alert("Error : Try Again ! ");
+ 
 });
 self.loading = true ; 
 self.review = "";

@@ -11,6 +11,7 @@ if(err){
 }
 else{
     res.json(serviceprovider);
+
 }
 
 }  )
