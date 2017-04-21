@@ -23,6 +23,7 @@ else{
     
 ServiceProvider.findOne({username:req.body.username},function(err,servicelogin){
 if(err){
+
 res.send(err.message);
 }
 if(req.body.password==servicelogin.password){
@@ -46,7 +47,11 @@ serviceprovider = new ServiceProvider(req.body);
 serviceprovider.save(function(err){
             if(err){
                 res.send(err.message)
-               
+
+
+                console.log(err);
+
+
 
 
         
@@ -54,9 +59,12 @@ serviceprovider.save(function(err){
             else{
 
               
+
+
               
      res.json({ message: 'ServiceProvider added' });        
        
+
     }
         })
 
@@ -69,4 +77,8 @@ serviceprovider.save(function(err){
 
     }
 }
+
+
 module.exports = serviceController;
+
+

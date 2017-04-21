@@ -1,36 +1,23 @@
-<body>
 
-<h1>{{$ctrl.headings}}</h1>
+<head><title>Schedule</title></head>
 
-<div class= "app-schedule" 
-<from>
-sp_name: <br>
-<input type="text" ng-model="$ctrl.sp_name"><br>
+<div class="app-schedule">
+ <form ng-submit="$ctrl.addSchedule()">
+    
+<label>Service Provider Name: <input type="text"  required ng-model="$ctrl.sp_name"></label>
 
-details: <br>
-<input type="text" ng-model="$ctrl.details"><br>
-<button ng-click=$ctrl.editSchedule()>editSchedule"><br>"
-<!--<button type="update" class="btn btn-primary btn-lg" ng-click="updateSchedule()">Add</button>-->
 
-</from>
+ <br><br><br><label>Please Enter schedule of your classes here : <br><br> <textarea ID="area" class="in" 
+ required ng-model="$ctrl.details"  
+  style=" height: 200px; width:400px;"> 
+</textarea></label>
+<br><br>
+ <input type= "submit"  value = "Add Schedule " style=" height: 70px; width:130px;" >
+
+  </form>
+
+ <div ng-show="$ctrl.loading">
+ <p> Schedule posted : {{$ctrl.viewSchedule}}</p>
+ <div> </div> 
+  </div>
 </div>
-
-
-
-
-
-
-
-
-
-<!--<body>
-
-<h1>{{$ctrl.headings}}</h1>
-
-<div class= "app-schedule" 
-
-<button type="update" class="btn btn-primary btn-lg" ng-click="updateSchedule()">Add</button>
-</div>
-
-</div>
-</body>-->

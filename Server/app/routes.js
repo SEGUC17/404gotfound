@@ -3,6 +3,7 @@ var express = require('express');
 var router = express.Router();
 
 var stripe = require("stripe")("sk_test_AxrSsRJdvQ5DgIlN5EURlfzW");
+
 var postController = require('./controllers/postController');
 var deleteDiscussionUser = require('./controllers/deleteDiscussionUser');
 var deleteDiscussionSer = require('./controllers/deleteDiscussionSer');
@@ -19,14 +20,13 @@ var controller = require('./controllers/controller');
 
 
 
-
 router.get('/events', eventsController.showEvents);
 router.get('/search', searchController.showSearchResults);
+
 router.get('/', function(req, res) {
     res.json({ message: 'welcome to the website' });   
 });
 router.get('/get-data', serviceController.getALL);
-
 
 router.get('/payment', function(req,res){
 
@@ -67,7 +67,6 @@ router.post('/event', eventController.createEvent);
 router.post('/signup-sp', serviceController.signup);
 router.post('/insert', reviewsController.insert);
 
-
 router.put('/comment', postController.comment);
 router.put('/discussionUser/comment', controller.addComment);
 router.put('/event', eventController.updateEvent);
@@ -78,9 +77,6 @@ router.delete('/deleteUser', deleteDiscussionUser.deleteDiscussion);
 router.delete('/deleteSP', deleteDiscussionSer.deleteDiscussion);
 router.delete('/deleteEvent', deleteEvent.deleteEvent);
 router.delete('/deleteSchedule', deleteSchedule.deleteSchedule);
-
-
-
 
 
 module.exports = router;

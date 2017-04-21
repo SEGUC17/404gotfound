@@ -29,6 +29,9 @@ var serviceproviderSchema = mongoose.Schema({
 
 },
     admin: Boolean ,
+
+    
+
      serviceoffered:{
     type:String,
     required:true
@@ -38,13 +41,19 @@ var serviceproviderSchema = mongoose.Schema({
     },
      schedule:{
 
-     type:Array
+     type:String
 
-     },
+} , 
+
+subscription_fee_per_month : String , 
+
     URL:String
 });
 
 var ServiceProvider = mongoose.model("serviceprovider", serviceproviderSchema);
 
 
+
 module.exports = ServiceProvider;
+
+

@@ -7,6 +7,7 @@ var scheduleSchema = new Schema({
 
   details : String
 
+  
 }); 
 
 
