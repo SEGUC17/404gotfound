@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<!-- Step 1 -->
-<html lang="en" ng-app="befitApp" class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="befitApp" class="no-js"> 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,19 +12,31 @@
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
-    
-    <div class="app-wrapper">
-        
-        <ui-view></ui-view>
-    </div>
- 
- 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-  <script src="app.js"></script>
-  <script src="components/login/login.component.js"></script>
-  <script src="components/signup/signup.component.js"></script>
+    
+<div class = "app-wrapper" >
+
+
+        <ui-view></ui-view> 
+
+  
+
+
+
+</div>
+
+    
+ <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+ <script src="https://checkout.stripe.com/checkout.js" ></script>
+<script src="app.js"></script>
+<script src="components/write-review/write-review.component.js"></script>
+<script src="components/event-list/event-list.component.js"></script>
+<scipt src="components/schedule-list/schedule-list.component.js"></script>
+<script src="components/stripe-payment/stripe-payment.component.js"></script>
+<script src="components/servicelogin/login.component.js"></script>
+<script src="components/servicesignup/signup.component.js"></script>
+ <script src="components/userlogin/login.component.js"></script>
+<script src="components/usersignup/signup.component.js"></script>
 </body>
 </html>

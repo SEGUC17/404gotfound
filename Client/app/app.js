@@ -1,11 +1,45 @@
 'use strict';
 
-// Step 1
 
-var MyApp= angular.module('befitApp', ['ui.router']);
+var befitApp = angular.module('befitApp',['ui.router']);
 
-MyApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  var loginState = {
+befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    
+
+    var reviewState = {
+        name: 'review' ,
+        url: '/review' ,
+        template: '<write-review></write-review>'
+    }
+  
+   
+
+ var viewState = {
+        name: 'view' ,
+        url: '/view' ,
+        template: '<viewsp></viewsp>'
+    }
+  
+  
+
+
+    var eventState = {
+        name: 'event' ,
+        url: '/event' ,
+        template: '<event-list></event-list>'
+    }
+    var scheduleState = {
+        name : 'schedule',
+        url: '/schedule',
+        template : '<schedule-list></schedule-list>'
+    }
+      var paymentState = {
+        name : 'payment',
+        url: '/payment',
+        template : '<stripe-payment></stripe-payment>'
+    }
+      var loginState = {
+
     name: 'login',
     url: '/login',
     template: '<login></login>'
@@ -16,10 +50,36 @@ MyApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
     url: '/signup',
     template: '<signup></signup>'
   }
+       var loginaState = {
+
+    name: 'login',
+    url: '/loginuser',
+    template: '<login></login>'
+  }
+
+  var signupaState = {
+    name: 'signup',
+    url: '/signupuser',
+    template: '<signup></signup>'
+  }
+
 
   $stateProvider.state(loginState);
   $stateProvider.state(signupState);
 
-  $urlRouterProvider.when('', '/login');//when in home page
+  $stateProvider.state(loginaState);
+  $stateProvider.state(signupaState);
+
+
+    $stateProvider.state(eventState);
+    $stateProvider.state(scheduleState);
+    $stateProvider.state(paymentState);
+     $stateProvider.state(reviewState);
+     $stateProvider.state(viewState);
+
+    
+    $urlRouterProvider.when('','/login');
+
+        
 }]);
 
