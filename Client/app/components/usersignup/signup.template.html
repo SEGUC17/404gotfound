@@ -1,0 +1,32 @@
+<h1>{{ $ctrl.heading }}</h1>
+
+	<button ng-click=$ctrl.show()>click To SignUp</button>
+
+<div ng-show="$ctrl.showMe">
+    
+    <form>
+    name: <br>
+	<input type="text" ng-model= "$ctrl.name"><br>
+	username: <br>
+	<input type="text" ng-model="$ctrl.username"><br>
+    password:<br>
+	<input type="text"  ng-model="$ctrl.password"><br>
+    age: <br>
+	<input type="text" ng-model="$ctrl.age"><br>
+   weight: <br>
+	<input type="text" ng-model="$ctrl.weight"><br>
+   target weight: <br>
+	<input type="text" ng-model="$ctrl.target_weight"><br>
+ height: <br>
+	<input type="text" ng-model="$ctrl.height"><br>
+
+ BMI: <br>
+	<input type="text" ng-model="$ctrl.BMI"><br>
+body fat: <br>
+	<input type="text" ng-model="$ctrl.body_fat"><br>
+
+
+ <button ng-click=$ctrl.signup()> Signup</button>
+  </form>
+
+</div>

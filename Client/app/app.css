@@ -5,7 +5,9 @@ body, html {
 }
 body {
 
+
     background-color : lightskyblue;
+
 
 }
 .app-wrapper {
@@ -30,6 +32,7 @@ a:active {
     color: black;
     text-decoration: none;
 }
+
 
 .app-event {
     background-color : lightskyblue;

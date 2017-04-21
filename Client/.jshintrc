@@ -2,6 +2,7 @@
   "strict": "global",
   "globals": {
 
+
     
     "angular": false,
 
@@ -15,6 +16,7 @@
     "afterEach": false,
     "it": false,
     "expect": false,
+
 
     "browser": false,
     "element": false,
