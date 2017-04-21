@@ -5,11 +5,9 @@ var scheduleSchema = new Schema({
 
   sp_name:  String,
 
-
   details : String
 
   
-
 }); 
 
 

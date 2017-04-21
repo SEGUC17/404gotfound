@@ -15,6 +15,7 @@ let eventController = {
 
                 res.send(event);
 
+
             }
         })
     },

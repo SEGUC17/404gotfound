@@ -4,7 +4,20 @@
 var befitApp = angular.module('befitApp',['ui.router']);
 
 befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+
     
+  var scheduleupdateState = {
+        name : 'scheduleupdateList',
+        url: '/scheduleupdate',
+        template : '<scheduleupdate-list></scheduleupdate-list>'
+    }
+
+    var updatespState = {
+        name : 'updatesp',
+        url: '/updatesp:_id',
+        // url: '/updatesp:_id',
+        template : '<update-profile></update-profile>'
+    }
 
     var reviewState = {
         name: 'review' ,
@@ -21,8 +34,6 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
     }
   
   
-
-
     var eventState = {
         name: 'event' ,
         url: '/event' ,
@@ -64,22 +75,24 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
   }
 
 
-  $stateProvider.state(loginState);
-  $stateProvider.state(signupState);
+$stateProvider.state(loginState);
+$stateProvider.state(signupState);
+$stateProvider.state(loginaState);
+$stateProvider.state(signupaState);
 
-  $stateProvider.state(loginaState);
-  $stateProvider.state(signupaState);
+ $stateProvider.state(scheduleupdateState);
 
-
-    $stateProvider.state(eventState);
-    $stateProvider.state(scheduleState);
-    $stateProvider.state(paymentState);
-     $stateProvider.state(reviewState);
-     $stateProvider.state(viewState);
+ $stateProvider.state(updatespState);
+ $stateProvider.state(eventState);
+ $stateProvider.state(scheduleState);
+ $stateProvider.state(paymentState);
+ $stateProvider.state(reviewState);
+ $stateProvider.state(viewState);
 
     
     $urlRouterProvider.when('','/login');
 
         
 }]);
+
 
