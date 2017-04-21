@@ -47,4 +47,6 @@ subscription_fee_per_month : String ,
 var ServiceProvider = mongoose.model("serviceprovider", serviceproviderSchema);
 
 
+
 module.exports = ServiceProvider;
+

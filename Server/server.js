@@ -1,5 +1,6 @@
 
 
+
 var express = require('express');
 var router = require('./app/routes');
 var bodyParser = require('body-parser');
@@ -9,9 +10,11 @@ var mongoose = require('mongoose');
 var DB_URI = "mongodb://localhost:27017/portfolio";
 
 
+
 var app = express();
 
 app.set('view engine', 'ejs');
+
 app.set('views', path.join(__dirname , 'views'));
 
 app.use(bodyParser.urlencoded({extended:false}));
@@ -46,4 +49,5 @@ app.use(function(req, res, next) {
 app.listen(3000, function(){
     console.log("server is listening on port 3000");
 })
+
 

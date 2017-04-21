@@ -13,7 +13,9 @@ if(err){
 }
 else{
 
+
 res.send(reviewsandratings);
+
 
 
 }

@@ -1,4 +1,5 @@
 
+
 var express = require('express');
 var router = express.Router();
 
@@ -22,10 +23,12 @@ var controller = require('./controllers/controller');
 
 router.get('/events', eventsController.showEvents);
 router.get('/search', searchController.showSearchResults);
+
 router.get('/', function(req, res) {
     res.json({ message: 'welcome to the website' });   
 });
 router.get('/get-data', serviceController.getALL);
+
 
 
 
@@ -79,7 +82,6 @@ router.delete('/deleteUser', deleteDiscussionUser.deleteDiscussion);
 router.delete('/deleteSP', deleteDiscussionSer.deleteDiscussion);
 router.delete('/deleteEvent', deleteEvent.deleteEvent);
 router.delete('/deleteSchedule', deleteSchedule.deleteSchedule);
-
 
 
 

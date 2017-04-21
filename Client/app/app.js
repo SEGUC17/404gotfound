@@ -1,6 +1,5 @@
 'use strict';
 
-
 var befitApp = angular.module('befitApp',['ui.router']);
 
 befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
@@ -38,6 +37,20 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
         url: '/payment',
         template : '<stripe-payment></stripe-payment>'
     }
+      var loginState = {
+    name: 'login',
+    url: '/login',
+    template: '<login></login>'
+  }
+
+  var signupState = {
+    name: 'signup',
+    url: '/signup',
+    template: '<signup></signup>'
+  }
+
+  $stateProvider.state(loginState);
+  $stateProvider.state(signupState);
     $stateProvider.state(eventState);
     $stateProvider.state(scheduleState);
     $stateProvider.state(paymentState);
@@ -49,5 +62,6 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
 
         
 }]);
+
 
 
