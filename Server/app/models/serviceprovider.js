@@ -32,17 +32,21 @@ var serviceproviderSchema = mongoose.Schema({
     type:String,
     required:true
 
-
-
     },
      schedule:{
 
-     type:Array
+     type:String
 
-     },
+} , 
+
+subscription_fee_per_month : String , 
+
     URL:String
 });
 
 var ServiceProvider = mongoose.model("serviceprovider", serviceproviderSchema);
 
+
+
 module.exports = ServiceProvider;
+

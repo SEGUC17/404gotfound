@@ -1,6 +1,6 @@
 angular.module('befitApp').
   component('login', {
-    //Important note on path: it starts from the app folder as the root
+   
     templateUrl: 'components/servicelogin/login.template.html',
     controller: function LoginController($http) {
       var self = this;
@@ -17,7 +17,7 @@ self.showMe=!self.showMe;
       
 var req={
     method: "POST",
-    url: "http://localhost:3000/login",//route for service
+    url: "http://localhost:3000/'/login-sp",//route for service
     data: { 
           
           

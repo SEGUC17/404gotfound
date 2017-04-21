@@ -1,13 +1,15 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
 
-var discussionSchema = new Schema({
+
+var discussionSchema = mongoose.Schema({
+
   content: {
     type: String,
     required: true
   },
   comment: {
+
   	type: String
   }
 });

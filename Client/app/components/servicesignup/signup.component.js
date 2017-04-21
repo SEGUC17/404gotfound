@@ -17,7 +17,7 @@ self.signup = function () {
 console.log(self.name);
 $http({
     method: "POST",
-    url: "http://localhost:3000/signup",//route for service
+    url: "http://localhost:3000/signup-sp",//route for service
     data: { 
           
           name : self.name ,

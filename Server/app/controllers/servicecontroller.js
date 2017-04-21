@@ -11,6 +11,7 @@ if(err){
 }
 else{
     res.json(serviceprovider);
+
 }
 
 }  )
@@ -27,8 +28,6 @@ if(err){
 res.send(err.message);
 }
 if(req.body.password==servicelogin.password){
-//res.redirect("/profile");
-console.log("logged in");
 
 res.json(servicelogin);
 }
@@ -49,7 +48,9 @@ serviceprovider = new ServiceProvider(req.body);
 serviceprovider.save(function(err){
             if(err){
                 res.send(err.message)
+
                 console.log(err);
+
 
 
         
@@ -57,9 +58,11 @@ serviceprovider.save(function(err){
             else{
 
               
-               // res.redirect('/serviceprovider');
+
+              
      res.json({ message: 'ServiceProvider added' });        
-      //  
+       
+
     }
         })
 
@@ -72,4 +75,6 @@ serviceprovider.save(function(err){
 
     }
 }
+
 module.exports = serviceController;
+
