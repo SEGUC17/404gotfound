@@ -17,7 +17,9 @@ controller: function StripePaymentController($http){
     }
 }).then(function (res) {     
 
-self.services = res.data ;
+
+self.names = res[0].name;
+self.fees = res[0].subscription_fee_per_month ;   
 
    
 }, function (err) {         
@@ -31,7 +33,7 @@ var handler = StripeCheckout.configure({
   locale: 'auto',
   token: function(token) {
  
-    $http({
+   $http({
     method: "POST",
     url: "http://localhost:3000/charge",
     data: { 
@@ -60,8 +62,6 @@ document.getElementById('customButton').addEventListener('click', function(e) {
  
 
   handler.open({
-
-
 
     name: 'Demo Site',
     description: '2 widgets',

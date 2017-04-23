@@ -2,7 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
-
+var jwt    = require('jsonwebtoken');
 var stripe = require("stripe")("sk_test_AxrSsRJdvQ5DgIlN5EURlfzW");
 
 var postController = require('./controllers/postController');
@@ -18,6 +18,8 @@ var scheduleController = require('./controllers/scheduleController');
 var userController = require('./controllers/userController');
 var eventController = require('./controllers/eventController');
 var controller = require('./controllers/controller');
+var User   = require('./models/user');
+var Serviceprov = require('./models/serviceprovider');
 
 
 
@@ -53,11 +55,77 @@ router.post('/charge', function(req , res){
         source: token
     }, function(err, charge){
         if (err & err.type === "StripeCardError" ){
-            console.log ("Your card was declined");  
+            
         }
     });
-    console.log("Your payment was successful")
+   
 res.redirect('/paysuccess');
+});
+
+router.post('/authenticate', function(req, res) {
+
+
+  User.findOne({
+    name: req.body.name
+  }, function(err, user) {
+
+    if (err) throw err;
+
+    if (!user) {
+      res.json({ success: false, message: 'Authentication failed. User not found.' });
+    } else if (user) {
+
+      if (user.password != req.body.password) {
+        res.json({ success: false, message: 'Authentication failed. Wrong password.' });
+      } else {
+
+        var token = jwt.sign(user, app.get('superSecret'), {
+          expiresInMinutes: 1440 
+        });
+
+        res.json({
+          success: true,
+          message: 'Enjoy your token!',
+          token: token
+        });
+      }   
+
+    }
+
+  });
+});
+router.post('/authenticatesp', function(req, res) {
+
+
+  Serviceprov.findOne({
+    name: req.body.name
+  }, function(err, servicrproviderreturn) {
+
+    if (err) throw err;
+
+    if (!user) {
+      res.json({ success: false, message: 'Authentication failed. SP not found.' });
+    } else if (servicrproviderreturn) {
+
+      if (servicrproviderreturn.password != req.body.password) {
+        res.json({ success: false, message: 'Authentication failed. Wrong password.' });
+      } else {
+
+       
+        var token = jwt.sign(servicrproviderreturn, app.get('superSecret'), {
+          expiresInMinutes: 1440 
+        });
+
+        res.json({
+          success: true,
+          message: 'Enjoy your token!',
+          token: token
+        });
+      }   
+
+    }
+
+  });
 });
 
 router.post('/post', postController.Post);

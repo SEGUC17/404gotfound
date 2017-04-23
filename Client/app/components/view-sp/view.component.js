@@ -2,7 +2,7 @@ angular.module('befitApp').
 
 component('viewsp',{
 
-templateUrl: 'components/viewsp/viewsp.template.html',
+templateUrl: 'components/view-sp/view.template.html',
 controller: function viewsp($http){
 
     var self = this ; 

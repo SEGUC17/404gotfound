@@ -10,10 +10,10 @@ let scheduleController = {
             if(schedule){
 
                 schedule.sp_name= req.body.sp_name || schedule.sp_name;
-                schedule.image=req.body.image || schedule.image;
+                schedule.details=req.body.details || schedule.details;
 
                 schedule.save(function(err,schedule){
-                    if (err){
+                    if (err){   
                         res.status(500).send(err)
                     }
                     res.send(schedule);

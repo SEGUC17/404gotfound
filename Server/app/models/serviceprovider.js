@@ -27,7 +27,9 @@ var serviceproviderSchema = mongoose.Schema({
 
 
 
-    },
+},
+
+admin: Boolean ,
      serviceoffered:{
     type:String,
     required:true
@@ -39,7 +41,7 @@ var serviceproviderSchema = mongoose.Schema({
 
 } , 
 
-subscription_fee_per_month : String , 
+subscription_fee_per_month : Number , 
 
     URL:String
 });

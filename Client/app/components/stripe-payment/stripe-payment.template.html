@@ -1,7 +1,10 @@
 
 <head><title>Payment </title></head>
 
-<div ng-repeat="service in $ctrl.services">
-    <h1>{{ $ctrl.service.name }}</h1>
+<div ng-repeat="name in $ctrl.names">
+    <h1>{{ $ctrl.name }}</h1>
+</div>
+<div ng-repeat="fee in $ctrl.fees">
+    <h1>{{ $ctrl.fee }}</h1>
 </div>
 <button id="customButton" style=" height: 70px"  >Pay with Card  </button> 
