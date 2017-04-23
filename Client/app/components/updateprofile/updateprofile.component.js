@@ -6,16 +6,19 @@ angular.module('befitApp').
    
     controller: function serviceProviderController($http, $stateParams) {
       var self = this;
-   self.id = $stateParams.id;
 
-     self.updateprofile = function() {
+      
+
+    self.updateprofile = function() {
+
   
     $http({
     method: "PUT",
     url: "http://localhost:3000/serivceprovider",
     data: { 
-          _id : self._id ,
-          name : self.name ,
+
+           _id : "58fa572c0a77e02888013852" ,
+           name : self.name ,
            username : self.username , 
            password : self.password ,
            category : self.category ,
@@ -28,22 +31,22 @@ angular.module('befitApp').
 alert("Profile is Updated succesfully ");
 
 
-   
 
 }, function (err) {         
    alert("Error : Try Again ! ");
     
 });
 self.update = true ;
-
 self._id = "" ;
 self.name = "";
 self.username = "";
 self.password = "";
 self.category = "";
-self.serviceoffered= ""
+self.serviceoffered= "";
+self.schedule= ""
 }
 
-} 
+}
+
 })
      

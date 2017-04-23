@@ -1,0 +1,32 @@
+<head><title>Discussion posts</title></head>
+
+<div class="post-discussion">
+ <form ng-submit="$ctrl.addPost()">
+
+  <label>add Post: <input type="text"  required ng-model="$ctrl.addPost"></label>
+<br><br>Add comment:  &emsp;
+  <textarea ID="area" class="in" required ng-model="$ctrl.addComment"
+  style=" height: 200px; width:400px;">
+</textarea> &emsp;&emsp;
+<input  type= "submit"   value = "add" style=" height: 60px; width:125px;" >
+
+  </form>
+
+
+ <div ng-show="$ctrl.loading">
+   <p>
+     Details of last event posted :
+     <br>
+      ID  :   {{$ctrl.idofevent}} ,
+      Name : {{$ctrl.name}}
+     Title  :  {{$ctrl.eventTitle}} ,
+     Date  :  {{$ctrl.eventDate}},
+     <br>Description :  {{$ctrl.eventDes}}
+   </p>
+
+<label> ID: <input type="text"  required ng-model="$ctrl._id"></label>
+<button  ng-click="$ctrl.editEvent()"> Update Event </button>
+ </div>
+
+
+</div>

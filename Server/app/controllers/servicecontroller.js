@@ -48,13 +48,6 @@ serviceprovider.save(function(err){
             if(err){
                 res.send(err.message)
 
-
-                console.log(err);
-
-
-
-
-        
     }
             else{
 
@@ -63,7 +56,7 @@ serviceprovider.save(function(err){
 
               
      res.json({ message: 'ServiceProvider added' });        
-       
+    res.json({ success: true });
 
     }
         })
