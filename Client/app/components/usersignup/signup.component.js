@@ -1,10 +1,12 @@
 angular.module('befitApp').
+
   component('signupuser', {
  
     templateUrl: 'components/usersignup/signup.template.html',
    
    
     controller: function SignUpUserController($http) {
+
       var self = this;
     self.heading = "SignUp";
 self.showMe=false;
@@ -17,7 +19,9 @@ self.signup = function () {
 
 $http({
     method: "POST",
+
     url: "http://localhost:3000/signup",
+
     data: { 
           
           name : self.name ,

@@ -11,12 +11,12 @@ var jwt    = require('jsonwebtoken');
 var config = require('./config');
 
 
-
+mongoose.connect(config.database); 
 
 var app = express();
 
 app.set('view engine', 'hbs');
-
+app.set('superSecret', config.secret); 
 app.set('views', path.join(__dirname , 'views'));
 
 app.use(function(req, res, next) {    
@@ -45,10 +45,6 @@ app.use(morgan('dev'));
 mongoose.connect(config.database);
 
 app.use(router);
-
-
-
-
 
 
 app.listen(3000, function(){

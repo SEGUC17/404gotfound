@@ -11,7 +11,9 @@ var userSchema = mongoose.Schema({
      type:String,
      required : true,
    },
-admin: Boolean ,
+
+ admin: Boolean ,
+
  name : String ,
  age : Number,
  weight : Number,

@@ -1,5 +1,4 @@
 
-
 var express = require('express');
 var router = express.Router();
 var jwt    = require('jsonwebtoken');
@@ -31,9 +30,6 @@ router.get('/', function(req, res) {
 });
 router.get('/get-data', serviceController.getALL);
 
-
-
-
 router.get('/payment', function(req,res){
 
     res.render('index', {
@@ -61,6 +57,7 @@ router.post('/charge', function(req , res){
    
 res.redirect('/paysuccess');
 });
+
 
 router.post('/authenticate', function(req, res) {
 
@@ -128,6 +125,7 @@ router.post('/authenticatesp', function(req, res) {
   });
 });
 
+
 router.post('/post', postController.Post);
 router.post('/discussionUser', controller.postDiscussion);
 router.post('/login-sp', serviceController.login);
@@ -141,17 +139,13 @@ router.post('/insert', reviewsController.insert);
 router.put('/comment', postController.comment);
 router.put('/discussionUser/comment', controller.addComment);
 router.put('/event', eventController.updateEvent);
-
 router.put('/schedule',scheduleController.updateSchedule);
-
 router.put('/serivceprovider',scheduleController.updateServiceProvider);
 
 router.delete('/deleteUser', deleteDiscussionUser.deleteDiscussion);
 router.delete('/deleteSP', deleteDiscussionSer.deleteDiscussion);
 router.delete('/deleteEvent', deleteEvent.deleteEvent);
 router.delete('/deleteSchedule', deleteSchedule.deleteSchedule);
-
-
 
 
 module.exports = router;

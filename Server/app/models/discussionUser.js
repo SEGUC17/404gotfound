@@ -2,7 +2,9 @@ var mongoose = require('mongoose');
 
 
 
+
 var discussionSchema = mongoose.Schema({
+
 
   content: {
     type: String,
@@ -16,3 +18,4 @@ var discussionSchema = mongoose.Schema({
 
 
 var Discussion = module.exports = mongoose.model('Discussion', discussionSchema);
+

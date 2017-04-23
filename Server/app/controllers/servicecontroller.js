@@ -11,7 +11,6 @@ if(err){
 }
 else{
     res.json(serviceprovider);
-
 }
 
 }  )
@@ -49,12 +48,11 @@ serviceprovider.save(function(err){
             if(err){
                 res.send(err.message)
 
-
-
     }
             else{
 
               
+
 
               
      res.json({ message: 'ServiceProvider added' });        
@@ -73,5 +71,7 @@ serviceprovider.save(function(err){
     }
 }
 
+
 module.exports = serviceController;
+
 

@@ -29,10 +29,14 @@ var serviceproviderSchema = mongoose.Schema({
 
 },
 
-admin: Boolean ,
-     serviceoffered:{
+
+    admin: Boolean ,
+
+    serviceoffered:{
     type:String,
     required:true
+
+
 
     },
      schedule:{
@@ -51,4 +55,5 @@ var ServiceProvider = mongoose.model("serviceprovider", serviceproviderSchema);
 
 
 module.exports = ServiceProvider;
+
 

@@ -6,14 +6,17 @@ angular.module('befitApp').
    
     controller: function serviceProviderController($http, $stateParams) {
       var self = this;
+
       
 
     self.updateprofile = function() {
+
   
     $http({
     method: "PUT",
     url: "http://localhost:3000/serivceprovider",
     data: { 
+
            _id : "58fa572c0a77e02888013852" ,
            name : self.name ,
            username : self.username , 
@@ -26,6 +29,8 @@ angular.module('befitApp').
     }
 }).then(function (res) {     
 alert("Profile is Updated succesfully ");
+
+
 
 }, function (err) {         
    alert("Error : Try Again ! ");
@@ -42,5 +47,6 @@ self.schedule= ""
 }
 
 }
+
 })
      
