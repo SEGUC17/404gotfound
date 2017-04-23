@@ -14,8 +14,7 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
 
     var updatespState = {
         name : 'updatesp',
-        url: '/updatesp:_id',
-        // url: '/updatesp:_id',
+        url: '/updatesp',
         template : '<update-profile></update-profile>'
     }
 

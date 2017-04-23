@@ -62,7 +62,7 @@ router.post('/discussionUser', controller.postDiscussion);
 router.post('/login-sp', serviceController.login);
 router.post('/signup', userController.add);
 router.post('/login',userController.Bring);
-router.post('/schedule', scheduleController.postSchedule);
+//router.post('/schedule', scheduleController.postSchedule);
 router.post('/event', eventController.createEvent);
 router.post('/signup-sp', serviceController.signup);
 router.post('/insert', reviewsController.insert);

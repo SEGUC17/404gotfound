@@ -10,7 +10,7 @@ let scheduleController = {
             if(schedule){
 
                 schedule.sp_name= req.body.sp_name || schedule.sp_name;
-                schedule.image=req.body.image || schedule.image;
+                schedule.details=req.body.details || schedule.details;
 
                 schedule.save(function(err,schedule){
                     if (err){
@@ -28,6 +28,7 @@ res.send("not found");
  
     
       updateServiceProvider:function(req,res){
+        //ServiceProvider.findOne({ 'username' : req.body.username })
        ServiceProvider.findById(req.body._id,function(err,serviceprovider){
             if (err) {
                 res.status(500).send(err);
@@ -53,31 +54,34 @@ res.send("not found");
 res.send("not found");
              }
         })
-      },
-
+      }
+}
+      module.exports = scheduleController;
+// app.get("/search", function(req, res) {  
+//   res.sendfile('./views/search.html');
+// });
     
-       postSchedule:function(req, res){
-        let schedule = new Schedule(req.body);
+    //    postSchedule:function(req, res){
+    //     let schedule = new Schedule(req.body);
 
 
-        schedule.save(function(err, schedule){
+    //     schedule.save(function(err, schedule){
 
-            if(err){
-                res.send(err.message)
+    //         if(err){
+    //             res.send(err.message)
               
-            }
-            else{
+    //         }
+    //         else{
 
-                res.send(schedule);
+    //             res.send(schedule);
 
-            }
-        })
-    }
-    }     
-
-
+    //         }
+    //     })
+    // }
+    // }     
 
 
 
 
-module.exports = scheduleController;
+
+

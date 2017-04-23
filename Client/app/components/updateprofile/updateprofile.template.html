@@ -2,7 +2,7 @@
 
 <h1>{{$ctrl.headings}}</h1>
 
-<div class= "app-schedule" 
+<div class= "app-schedule" >
 <from>
 name: <br>
 <input type="text" ng-model="$ctrl.name"><br>
@@ -16,8 +16,6 @@ ServiceOffered: <br>
 <input type="text" ng-model="$ctrl.serviceoffered"><br>
 schedule: <br>
 <input type="text" ng-model="$ctrl.schedule"><br>
-<button ng-click=$ctrl.updateprofile()>updateprofile"><br>"
-<!--<button type="update" class="btn btn-primary btn-lg" ng-click="updateSchedule()">Add</button>-->
-
+<button ng-click="$ctrl.updateprofile()">updateprofile</button>
 </from>
 </div>
