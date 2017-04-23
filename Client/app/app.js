@@ -1,22 +1,9 @@
 'use strict';
 
-
 var befitApp = angular.module('befitApp',['ui.router']);
 
 befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-
     
-  var scheduleupdateState = {
-        name : 'scheduleupdateList',
-        url: '/scheduleupdate',
-        template : '<scheduleupdate-list></scheduleupdate-list>'
-    }
-
-    var updatespState = {
-        name : 'updatesp',
-        url: '/updatesp:_id',
-        template : '<update-profile></update-profile>'
-    }
 
     var reviewState = {
         name: 'review' ,
@@ -44,6 +31,8 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
     }
   
   
+
+
     var eventState = {
         name: 'event' ,
         url: '/event' ,
@@ -59,13 +48,11 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
         url: '/payment',
         template : '<stripe-payment></stripe-payment>'
     }
-
    
   var loginState = {
     name: 'signin',
     url: '/signin',
     template: '<signin></signin>'
-
   }
 
 
@@ -74,7 +61,6 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
     url: '/signup',
     template: '<signup></signup>'
   }
-
    var loginuserState = {
     name: 'loginuser',
     url: '/loginuser',
@@ -119,10 +105,11 @@ $stateProvider.state(postState);
 $stateProvider.state(homepageState);
 $stateProvider.state(homeState);
 
-
-$urlRouterProvider.when('','/home');
+    
+    $urlRouterProvider.when('','/home');
 
         
 }]);
+
 
 

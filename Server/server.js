@@ -42,7 +42,6 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname+ '/public'));
 app.use(morgan('dev'));
 
-mongoose.connect(config.database);
 
 app.use(router);
 

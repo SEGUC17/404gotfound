@@ -7,7 +7,6 @@ controller: function ScheduleListController($http){
 
     var self = this ; 
     self.loading = false ;
-    self.update = false ;
 
  self.addSchedule = function() {
   
@@ -36,9 +35,9 @@ self.viewSchedule = res.data.details;
 self.loading = true ;
 self.sp_name = "";
 self.details = "";
+ 
   
  }
- 
  } 
      
 })
