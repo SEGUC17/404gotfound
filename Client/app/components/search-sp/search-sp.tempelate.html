@@ -1,0 +1,23 @@
+<head><title>Search</title></head>
+
+<div class="app-search">
+ <form ng-submit="$ctrl.addRow()">
+
+  <label>Service Provider Name: <input type="text"  required ng-model="$ctrl.name"></label>
+
+<input  type= "submit"   value = "Create Event " style=" height: 60px; width:125px;" >
+
+  </form>
+ 
+
+ <div ng-show="$ctrl.loading">
+   <p> 
+     <br> 
+      Name : {{$ctrl.name}}
+
+   </p>
+   
+ </div>
+
+ 
+</div>
