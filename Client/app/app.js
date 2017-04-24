@@ -18,6 +18,18 @@ befitApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider,
         url: '/view' ,
         template: '<viewsp></viewsp>'
     }
+
+       var eventsState = {
+    name: 'events',
+    url: '/events',
+    template: '<events-list></events-list>'
+  }
+
+  var searchState = {
+    name: 'search',
+    url: '/search',
+    template: '<search-list></search-list>'
+  }
     var scheduleupdateState = {
         name : 'scheduleList',
         url: '/scheduleupdate',
@@ -104,6 +116,8 @@ $stateProvider.state(viewState);
 $stateProvider.state(postState);
 $stateProvider.state(homepageState);
 $stateProvider.state(homeState);
+$stateProvider.state(eventsState);
+$stateProvider.state(searchState);
 
     
     $urlRouterProvider.when('','/home');
