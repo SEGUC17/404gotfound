@@ -36,7 +36,7 @@ $http({
         'Content-Type': 'application/json'
     }
 }).then(function (res) {     
-alert(res);
+alert("sign up");
 
 
    
