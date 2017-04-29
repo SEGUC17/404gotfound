@@ -8,7 +8,7 @@ $rootScope.showit = false;
 
  $http({
     method: "GET",
-    url: 'http://localhost:3000/get-data',
+    url: '/get-data',
      
            headers: {
         'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ var handler = StripeCheckout.configure({
  
    $http({
     method: "POST",
-    url: "http://localhost:3000/charge",
+    url: "/charge",
     data: { 
           
       token : token 

@@ -10,7 +10,7 @@ postCtrl.controller('postCtrl',function($scope,$rootScope,$http){
   $scope.addPost = function(){
    $http({
       method: "POST",
-    url: "http://localhost:3000/post" ,
+    url: "/post" ,
     data: {
       
      comment : $scope.comment,
@@ -27,7 +27,7 @@ postCtrl.controller('postCtrl',function($scope,$rootScope,$http){
     $scope.post.comment = {};
     $http({
       method: "PUT",
-      url: "http://localhost:3000/comment" ,
+      url: "/comment" ,
       data: {
         comment = $scope.post.comment.createdOn = Date.now(),
         post = $scope.post.comments.push (this.comment) ,

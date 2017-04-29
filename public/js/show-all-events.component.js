@@ -7,7 +7,7 @@ $rootScope.showit = false;
     var $scope = this ; 
     this.heading = "Events";
 
-    $http.get("http://localhost:3000/events").then(function(response) {
+    $http.get("/events").then(function(response) {
         $scope.events = response.data;
     
  });

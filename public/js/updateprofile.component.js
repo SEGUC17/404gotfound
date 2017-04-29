@@ -12,7 +12,7 @@ $rootScope.showit = false;
   
     $http({
     method: "PUT",
-    url: "http://localhost:3000/serivceprovider",
+    url: "/serivceprovider",
     data: { 
 
            _id : "58fa572c0a77e02888013852" ,

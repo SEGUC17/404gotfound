@@ -16,7 +16,7 @@ $scope.showMe=!$scope.showMe;
 var req={
     method: "POST",
 
-    url: "http://localhost:3000/login",
+    url: "/login",
 
     data: { 
           

@@ -13,7 +13,7 @@ $rootScope.showit = false;
   
     $http({
     method: "POST",
-    url: "http://localhost:3000/insert",
+    url: "/insert",
     data: { 
            review: $scope.review , 
            rate : $scope.rate ,

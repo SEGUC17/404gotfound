@@ -9,7 +9,7 @@ $scope.loading = false ;
   
     $http({
     method: "POST",
-    url: "http://localhost:3000/schedule",
+    url: "/schedule",
     data: { 
           
            sp_name : $scope.sp_name ,

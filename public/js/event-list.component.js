@@ -11,7 +11,7 @@ $scope.addRow = function() {
   
     $http({
     method: "POST",
-    url: "http://localhost:3000/event",
+    url: "/event",
     data: { 
           
            sp_name : $scope.sp_name ,
@@ -49,7 +49,7 @@ $scope.editEvent = function() {
 
     $http({
     method: "PUT",
-    url: "http://localhost:3000/event",
+    url: "/event",
     data: { 
           _id : $scope._id ,
           sp_name : $scope.sp_name ,

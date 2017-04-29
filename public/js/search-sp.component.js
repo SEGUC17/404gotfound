@@ -11,7 +11,7 @@ $rootScope.showit = false;
         
         $http({
         method: "GET",
-        url: "http://localhost:3000/search",
+        url: "/search",
         headers: {
         'Content-Type': 'application/json'
     }

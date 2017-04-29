@@ -13,7 +13,7 @@ $rootScope.showit = false;
   
     $http({
     method: "DELETE",
-    url: "http://localhost:3000/post",
+    url: "/post",
    
            headers: {
         'Content-Type': 'application/json'

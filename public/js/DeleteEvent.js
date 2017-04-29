@@ -1,24 +1,27 @@
-var discussionUserCtrl =angular.module('discussionUserCtrl',[]);
+var deleteCtrl =angular.module('deleteCtrl',[]);
 
-disussionUserCtrl.controller('discussionUserCtrl',function($scope,$rootScope,$http){
+deleteCtrl.controller('deleteCtrl',function($scope,$rootScope,$http){
 
 
 $rootScope.showit = false;
+
+     
+
     $scope.loading = false ;
     $scope.update = false ;
   
 
- $scope.DeleteDiscussionUser = function() {
+ $scope.DeleteEvent = function() {
   
     $http({
     method: "DELETE",
-    url: "/Discussion",
+    url: "/Event",
    
            headers: {
         'Content-Type': 'application/json'
     }
 }).then(function (res) {     
-alert("Discussion is deleted succesfully ");
+alert("Event is deleted succesfully ");
 
 
    
@@ -33,5 +36,5 @@ $scope.loading = true ;
  }
 
 
-} 
+
 })

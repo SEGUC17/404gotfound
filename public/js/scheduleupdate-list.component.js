@@ -14,7 +14,7 @@ $scope.editSchedule = function() {
 
     $http({
     method: "PUT",
-    url: "http://localhost:3000/schedule",
+    url: "/schedule",
     data: { 
             _id : "58fcaa2306ae1156cbc045c0" ,
             sp_name:  $scope.sp_name ,

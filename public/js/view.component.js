@@ -10,7 +10,7 @@ $rootScope.showit = false;
   
     $http({
     method: "Get",  
-    url: "http://localhost:3000/get-data",
+    url: "/get-data",
     data: { 
            username: $scope.username , 
            category:$scope.category,
