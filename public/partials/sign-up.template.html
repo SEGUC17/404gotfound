@@ -1,0 +1,24 @@
+<h1>{{ heading }}</h1>
+
+	<button ng-click=show()>click To SignUp</button>
+
+<div ng-show="showMe">
+    
+    <form>
+    name: <br>
+	<input type="text" ng-model= "name"><br>
+	username: <br>
+	<input type="text" ng-model="username"><br>
+    password:<br>
+	<input type="text"  ng-model="password"><br>
+    Category: <br>
+	<input type="text" ng-model="category"><br>
+    ServiceOffered: <br>
+	<input type="text" ng-model="serviceoffered"><br>
+   schedule: <br>
+	<input type="text" ng-model="schedule"><br>
+ 
+<a href =#/signin ><button ng-click=signup()> Signup</button> </a>
+  </form>
+
+</div>

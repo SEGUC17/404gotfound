@@ -1,0 +1,23 @@
+<head><title>Search</title></head>
+
+<div class="app-search">
+ <form ng-submit="addRow()">
+
+  <label>Service Provider Name: <input type="text"  required ng-model="name"></label>
+
+<input  type= "submit"   value = "Search " style=" height: 60px; width:125px;" >
+
+  </form>
+ 
+
+ <div ng-show="loading">
+   <p> 
+     <br> 
+      Name : {{name}}
+
+   </p>
+   
+ </div>
+
+ 
+</div>

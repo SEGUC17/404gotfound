@@ -1,0 +1,34 @@
+<h1>{{ heading }}</h1>
+
+	<button ng-click=show()>click To SignUp</button>
+
+<div ng-show="showMe">
+    
+    <form>
+    name: <br>
+	<input type="text" ng-model= "name"><br>
+	username: <br>
+	<input type="text" ng-model="username"><br>
+    password:<br>
+	<input type="text"  ng-model="password"><br>
+    age: <br>
+	<input type="text" ng-model="age"><br>
+   weight: <br>
+	<input type="text" ng-model="weight"><br>
+   target weight: <br>
+	<input type="text" ng-model="target_weight"><br>
+ height: <br>
+	<input type="text" ng-model="height"><br>
+
+ BMI: <br>
+	<input type="text" ng-model="BMI"><br>
+body fat: <br>
+	<input type="text" ng-model="body_fat"><br>
+
+
+
+ <a href =#/loginuser ><button ng-click=signup()> Signup</button> </a>
+
+  </form>
+
+</div>

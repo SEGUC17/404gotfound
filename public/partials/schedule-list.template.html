@@ -1,0 +1,27 @@
+
+<head><title>Schedule</title></head>
+
+<div class="app-schedule">
+ <form ng-submit="addSchedule()">
+    
+<label>Service Provider Name: <input type="text"  required ng-model="sp_name"></label>
+
+
+ <br><br><br><label>Please Enter schedule of your classes here : <br><br> <textarea ID="area" class="in" 
+ required ng-model="details"  
+  style=" height: 200px; width:400px;"> 
+</textarea></label>
+<br><br>
+ <input type= "submit"  value = "Add Schedule " style=" height: 70px; width:130px;" >
+
+  </form>
+
+ <div ng-show="loading">
+ <p> Schedule posted : {{viewSchedule}}</p>
+ <div> </div> 
+  </div>
+</div>
+
+
+
+ 
