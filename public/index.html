@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html class="no-js" ng-app="meanMapApp">
+<head>
+    <meta charset="utf-8">
+   
+    <meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDf4KxBmNnppeuC40PWdXMEJnLGv6cVzk"></script>
+
+    
+    <script src="../bower_components/modernizr/bin/modernizr"></script>
+
+  
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+
+    
+<script src="https://checkout.stripe.com/checkout.js" ></script>
+<script src="js/app.js"></script>
+<script src="js/gservice.js"></script>
+<script src="js/addCtrl.js"></script>
+<script src="js/queryCtrl.js"></script>
+<script src="js/headerCtrl.js"></script>
+<script src="js/event-list.component.js"></script>
+<script src="js/home-page.component.js"></script>
+<script src="js/home.component.js"></script>
+<script src="js/login.component.js"></script>
+<script src="js/post-discussion.component.js"></script>
+<script src="js/schedule-list.component.js"></script>
+<script src="js/scheduleupdate-list.component.js"></script>
+<script src="js/search-sp.component.js"></script>
+<script src="js/show-all-events.component.js"></script>
+<script src="js/sign-in.component.js"></script>
+<script src="js/sign-up.component.js"></script>
+<script src="js/signup.component.js"></script>
+<script src="js/stripe-payment.component.js"></script>
+<script src="js/updateprofile.component.js"></script>
+<script src="js/view.component.js"></script>
+<script src="js/write-review.component.js"></script>
+</head>
+
+<body>
+
+
+<div class="container">
+    
+    <div class="header" ng-controller="headerCtrl">
+
+        <ul class="nav nav-pills pull-right">
+            
+        </ul>
+
+        <h3 class="text-muted">Welcome to our Website</h3>
+    </div>
+
+    
+    <div class="row content">
+
+     
+       
+ <div ng-show="showit"   class="col-md-7" >
+            <div id="map"></div>
+        </div>
+
+                     
+
+        <div ng-view></div>
+
+    </div>
+    <hr/>
+
+    
+    <div class="footer">
+        <p class="text-center"><span class="glyphicon glyphicon-check"></span> 
+         Contact us on 01000765432 or send email to ourplatform@gmail.com for any inquiries or bugs
+       
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,32 @@
+<head><title>Review</title></head>
+
+<div class="app-review">
+ <form ng-submit="addReview()">
+
+  
+<br><br><label>Rate (from 0 to 5!): <input  required ng-model="rate"></label>
+
+<br><br>  Review:  &emsp;
+  <textarea ID="area" class="in" required ng-model="review"  
+  style=" height: 200px; width:400px;"> 
+</textarea> &emsp;&emsp;
+<input  type= "submit"   value = "Submit " style=" height: 60px; width:125px;" >
+
+  </form>
+ 
+
+ <div ng-show="loading">
+   <p> 
+     Details of last comment :
+     <br> 
+      
+     review  :  {{thisreview}} ,
+     rate  :  {{thisrate}},
+     
+   </p>
+   
+
+ </div>
+
+ 
+</div>

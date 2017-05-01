@@ -1,0 +1,54 @@
+var createCtrl =angular.module('createCtrl',[]);
+
+createCtrl.controller('createCtrl',function($scope,$rootScope,$http){
+
+$rootScope.showit = false;
+
+$scope.heading = "SignUp";
+$scope.showMe=false;
+$scope.show=function(){
+
+$scope.showMe=!$scope.showMe;
+
+}
+//signup user
+$scope.signup = function () {
+
+$http({
+    method: "POST",
+
+    url: "/signup",
+
+    data: { 
+          
+          name : $scope.name ,
+           Username : $scope.username , 
+           Password : $scope.password ,
+           age : $scope.age,
+           weight:$scope.weight,
+           target_weight: $scope.target_weight,
+           height:$scope,height,
+           BMI:$scope.BMI,
+           body_fat:$scope.body_fat
+            
+         }, 
+           headers: {
+
+        'Content-Type': 'application/json'
+    }
+}).then(function (res) {     
+alert("sign up");
+
+
+   
+
+}, function (err) {         
+   alert(err);
+    
+});
+
+}
+  
+ }
+    
+  );

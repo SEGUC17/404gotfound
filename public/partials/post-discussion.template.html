@@ -1,0 +1,23 @@
+<head><title>Discussion posts</title></head>
+
+<div class="post-discussion">
+ <form ng-submit="addPost()">
+
+  <label>add Post: <input type="text"  required ng-model="addPost"></label>
+<br><br>Add comment:  &emsp;
+  <textarea ID="area" class="in" required ng-model="addComment"
+  style=" height: 200px; width:400px;">
+</textarea> &emsp;&emsp;
+<input  type= "submit"   value = "add" style=" height: 60px; width:125px;" >
+
+  </form>
+
+
+     
+
+<label> ID: <input type="text"  required ng-model="_id"></label>
+<button  ng-click="editEvent()"> Add Comment </button>
+ </div>
+
+
+</div>

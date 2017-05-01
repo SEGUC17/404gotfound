@@ -1,0 +1,16 @@
+<head><title>ServiceProviders</title></head>
+
+<div class="app-viewsp">
+ <form ng-submit="addReview()">
+<br><br><label>Username: Degawy </label>
+<br><br><label>Category: Gym </label>
+<br><br><label>Service offered: Gym </label>
+ </form>
+
+ <tr ng-repeat="x in ServiceProvider">
+   <td>{{x.username}} </td>
+ <td>{{x.category}} </td>
+  <td>{{x.serviceoffered}} </td>
+ </tr>
+ 
+</div>
